@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppijan aivoriihin tulokset</title>
+    <link href="../media/omakuva1.png" rel="icon" type="image/png"/>
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed|Montserrat|Roboto+Mono|Dancing+Script&display=swap" rel="stylesheet">
+    <link href="../style/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div id="header-1">
+                <h1>Oppijan aivoriihin tulokset</h1>
+            </div>
+            <div id="header-2">
+                <span class="group" id="group-2">oppi2020</span>
+            </div>
+        </header>
+        <div id="content">
+            <section>
+                <p>Vastauksesi on tallennettu.</p>
+            </section>
+            <section>
+                <p>Kyselysi tulokset on kerätty ja lisätty ryhmän eWEB18 tuloksiin.</p>
+                <p>Lataa ryhmän kerätyt tiedot: <a href=#>&#8811;oppikeh_eWEB18.csv</a></p>
+            </section>
+            <section>
+                <p>Tiedonkeruun on laatinut KT Otto Burman v. 2019.</p>
+            </section>
+        </div>
+        <footer>
+            <div id="footer-1">
+                <p>&copy; 2020 Otto Burman</p>
+            </div>
+            <div id="footer-2">
+                <p>Julkaisu on lisensoitu Creative Commons 4.0 NonCommercial CC BY-NC-käyttöluvalla.</p>
+            </div>
+        </footer>
+    </div>
+    <div id="return"><a href="../">&#10140;</a></div>
+    <script>
+        var loc = window.location.pathname; var path = loc.substring(0, loc.lastIndexOf("/")); var dirname = path.substring(1, path.lastIndexOf("/")); var subdirname = dirname.substring(dirname.lastIndexOf("/")+1); document.getElementById("group-2").innerHTML = subdirname;
+    </script>
+</body>
+</html>

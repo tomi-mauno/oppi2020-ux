@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppijan kysely</title>
+    <link href="../media/omakuva1.png" rel="icon" type="image/png"/>
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed|Montserrat|Roboto+Mono|Dancing+Script&display=swap" rel="stylesheet">
+    <link href="../style/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div id="header-1">
+                <h1>Oppijan kysely</h1>
+            </div>
+            <div id="header-2">
+                <span class="group" id="group-2">oppi2020</span>
+            </div>
+        </header>
+        <div id="content">
+            <section>
+                <p>Seuraava kysely kartoittaa oppijan työilmapiirin sopivuuden.</p>
+            </section>
+            <section>
+                <h2>Oppijan kokeman työskentelyilmapiirin kartoitus</h2>
+                <p id="pre-insert">Aloita kysely kirjoittamalla yksilöivä tunnus tai salanimi:</p>
+                <div id="insert">
+                    <input id="insert-text" type="text" placeholder="Kirjoita tunnus tähän">
+                    <input id="insert-button" type="button" value="&#10140;" onclick="startsurvey();">
+                </div>
+                <div id="survey" style="display: none; opacity: 0; transform: scaleY(0);">
+                    <div class="survey-section">
+                        <h3 class="survey-section-title">Työn ja/tai oppimisen ilon väittämät</h3>
+                        <p>13.5. Minä tunnen, että minua ja meitä muita oppijoita ohjataan tekemään oikeita asioita ja oikein. Tunnen olevani asiantuntevassa ja hyvässä ohjauksessa.</p>
+                        <form id="sf-1">
+                            <button id="sf-1-1" onclick="select(this);" type="button"><span></span>Ei koskaan</button>
+                            <button id="sf-1-2" onclick="select(this);" type="button"><span></span>Todella harvoin</button>
+                            <button id="sf-1-3" onclick="select(this);" type="button"><span></span>Toisinaan</button>
+                            <button id="sf-1-4" onclick="select(this);" type="button"><span></span>En ole varma</button>
+                            <button id="sf-1-5" onclick="select(this);" type="button"><span></span>Aika usein</button>
+                            <button id="sf-1-6" onclick="select(this);" type="button"><span></span>Lähes aina</button>
+                            <button id="sf-1-7" onclick="select(this);" type="button"><span></span>Aina!</button>
+                        </form>
+                        <p>I3.6. Tunnen, että osallistumisesta ja oppimistehtävien tekemisestä tulee hyviä fiiliksiä minulle ja muille.</p>
+                        <form id="sf-2">
+                            <button id="sf-2-1" onclick="select(this);" type="button"><span></span>Ei koskaan</button>
+                            <button id="sf-2-2" onclick="select(this);" type="button"><span></span>Todella harvoin</button>
+                            <button id="sf-2-3" onclick="select(this);" type="button"><span></span>Toisinaan</button>
+                            <button id="sf-2-4" onclick="select(this);" type="button"><span></span>En ole varma</button>
+                            <button id="sf-2-5" onclick="select(this);" type="button"><span></span>Aika usein</button>
+                            <button id="sf-2-6" onclick="select(this);" type="button"><span></span>Lähes aina</button>
+                            <button id="sf-2-7" onclick="select(this);" type="button"><span></span>Aina!</button>
+                        </form>
+                        <p>I3.6. Minulla on tunne, että opin uusia asioita ja kehityn koko ajan taitavammaksi. Olen kehittymässä taitavaksi ja osaavaksi.</p>
+                        <form id="sf-3">
+                            <button id="sf-3-1" onclick="select(this);" type="button"><span></span>Ei koskaan</button>
+                            <button id="sf-3-2" onclick="select(this);" type="button"><span></span>Todella harvoin</button>
+                            <button id="sf-3-3" onclick="select(this);" type="button"><span></span>Toisinaan</button>
+                            <button id="sf-3-4" onclick="select(this);" type="button"><span></span>En ole varma</button>
+                            <button id="sf-3-5" onclick="select(this);" type="button"><span></span>Aika usein</button>
+                            <button id="sf-3-6" onclick="select(this);" type="button"><span></span>Lähes aina</button>
+                            <button id="sf-3-7" onclick="select(this);" type="button"><span></span>Aina!</button>
+                        </form>
+                        <p class="ignore-last">I3.12. Minulla on tunne, että osaan usein löytää hyviä keinoja tehdä sovitut oppimistehtävät. Tunnen tyytyväisyyttä osaamisestani.</p>
+                        <form id="sf-4">
+                            <button id="sf-4-1" onclick="select(this);" type="button"><span></span>Ei koskaan</button>
+                            <button id="sf-4-2" onclick="select(this);" type="button"><span></span>Todella harvoin</button>
+                            <button id="sf-4-3" onclick="select(this);" type="button"><span></span>Toisinaan</button>
+                            <button id="sf-4-4" onclick="select(this);" type="button"><span></span>En ole varma</button>
+                            <button id="sf-4-5" onclick="select(this);" type="button"><span></span>Aika usein</button>
+                            <button id="sf-4-6" onclick="select(this);" type="button"><span></span>Lähes aina</button>
+                            <button id="sf-4-7" onclick="select(this);" type="button"><span></span>Aina!</button>
+                        </form>
+                    </div>
+                    <div class="survey-section">
+                        <h3 class="survey-section-title">Työn ja oppimisen psykologisen omistajuuden väittämät</h3>
+                        <p>P2.1. Tunnen, että minun osallistuminen opetukseen ja tehtävien tekeminen on juuri minulle tärkeää. Tunnen kuinka kehityn minulle sopivien tehtävien parissa.</p>
+                        <form id="sf-5">
+                            <button id="sf-5-1" onclick="select(this);" type="button"><span></span>Ei koskaan</button>
+                            <button id="sf-5-2" onclick="select(this);" type="button"><span></span>Todella harvoin</button>
+                            <button id="sf-5-3" onclick="select(this);" type="button"><span></span>Toisinaan</button>
+                            <button id="sf-5-4" onclick="select(this);" type="button"><span></span>En ole varma</button>
+                            <button id="sf-5-5" onclick="select(this);" type="button"><span></span>Aika usein</button>
+                            <button id="sf-5-6" onclick="select(this);" type="button"><span></span>Lähes aina</button>
+                            <button id="sf-5-7" onclick="select(this);" type="button"><span></span>Aina!</button>
+                        </form>
+                        <p>P2.2. Osallistuminen opetukseen ja oppimistehtävien tekeminen saa minut tuntemaan, että kuulun opiskelijaporukkaan.</p>
+                        <form id="sf-6">
+                            <button id="sf-6-1" onclick="select(this);" type="button"><span></span>Ei koskaan</button>
+                            <button id="sf-6-2" onclick="select(this);" type="button"><span></span>Todella harvoin</button>
+                            <button id="sf-6-3" onclick="select(this);" type="button"><span></span>Toisinaan</button>
+                            <button id="sf-6-4" onclick="select(this);" type="button"><span></span>En ole varma</button>
+                            <button id="sf-6-5" onclick="select(this);" type="button"><span></span>Aika usein</button>
+                            <button id="sf-6-6" onclick="select(this);" type="button"><span></span>Lähes aina</button>
+                            <button id="sf-6-7" onclick="select(this);" type="button"><span></span>Aina!</button>
+                        </form>
+                        <p>P2.8. Kivaa on olla suunnittelemassa itselleen hommia ja toteuttaa sitten ne. Minulla on tunne, että tekee niin kuin itseään varten, itselleen.</p>
+                        <form id="sf-7">
+                            <button id="sf-7-1" onclick="select(this);" type="button"><span></span>Ei koskaan</button>
+                            <button id="sf-7-2" onclick="select(this);" type="button"><span></span>Todella harvoin</button>
+                            <button id="sf-7-3" onclick="select(this);" type="button"><span></span>Toisinaan</button>
+                            <button id="sf-7-4" onclick="select(this);" type="button"><span></span>En ole varma</button>
+                            <button id="sf-7-5" onclick="select(this);" type="button"><span></span>Aika usein</button>
+                            <button id="sf-7-6" onclick="select(this);" type="button"><span></span>Lähes aina</button>
+                            <button id="sf-7-7" onclick="select(this);" type="button"><span></span>Aina!</button>
+                        </form>
+                        <p class="ignore-last">P2.9. Saadessani vaikean tehtävän luen lisää ohjeita tai etsin apua (netistä, opettajalta, …). Minulla on tunne, että kaikkea ja kaikesta voi oppia.</p>
+                        <form id="sf-8">
+                            <button id="sf-8-1" onclick="select(this);" type="button"><span></span>Ei koskaan</button>
+                            <button id="sf-8-2" onclick="select(this);" type="button"><span></span>Todella harvoin</button>
+                            <button id="sf-8-3" onclick="select(this);" type="button"><span></span>Toisinaan</button>
+                            <button id="sf-8-4" onclick="select(this);" type="button"><span></span>En ole varma</button>
+                            <button id="sf-8-5" onclick="select(this);" type="button"><span></span>Aika usein</button>
+                            <button id="sf-8-6" onclick="select(this);" type="button"><span></span>Lähes aina</button>
+                            <button id="sf-8-7" onclick="select(this);" type="button"><span></span>Aina!</button>
+                        </form>
+                    </div>
+                    <div class="survey-section">
+                        <h3 class="survey-section-title">Sisäisen yrittäjyyden ja yrittäjämäisen oppimisen väittämät</h3>
+                        <p>Y1.2. Uusien juttujen kokeileminen on kivaa ja sopii minulle!</p>
+                        <form id="sf-9">
+                            <button id="sf-9-1" onclick="select(this);" type="button"><span></span>Ei koskaan</button>
+                            <button id="sf-9-2" onclick="select(this);" type="button"><span></span>Todella harvoin</button>
+                            <button id="sf-9-3" onclick="select(this);" type="button"><span></span>Toisinaan</button>
+                            <button id="sf-9-4" onclick="select(this);" type="button"><span></span>En ole varma</button>
+                            <button id="sf-9-5" onclick="select(this);" type="button"><span></span>Aika usein</button>
+                            <button id="sf-9-6" onclick="select(this);" type="button"><span></span>Lähes aina</button>
+                            <button id="sf-9-7" onclick="select(this);" type="button"><span></span>Aina!</button>
+                        </form>
+                        <p>Y1.3. Haluan nähdä ja kokea uutta. Kehittelen uusia asioita.</p>
+                        <form id="sf-10">
+                            <button id="sf-10-1" onclick="select(this);" type="button"><span></span>Ei koskaan</button>
+                            <button id="sf-10-2" onclick="select(this);" type="button"><span></span>Todella harvoin</button>
+                            <button id="sf-10-3" onclick="select(this);" type="button"><span></span>Toisinaan</button>
+                            <button id="sf-10-4" onclick="select(this);" type="button"><span></span>En ole varma</button>
+                            <button id="sf-10-5" onclick="select(this);" type="button"><span></span>Aika usein</button>
+                            <button id="sf-10-6" onclick="select(this);" type="button"><span></span>Lähes aina</button>
+                            <button id="sf-10-7" onclick="select(this);" type="button"><span></span>Aina!</button>
+                        </form>
+                        <p>Y1.5. Minä panostan mielenkiintoisiin ja haastaviin tehtäviin. Kun keksin ja haluan jotain, niin toteutan sen.</p>
+                        <form id="sf-11">
+                            <button id="sf-11-1" onclick="select(this);" type="button"><span></span>Ei koskaan</button>
+                            <button id="sf-11-2" onclick="select(this);" type="button"><span></span>Todella harvoin</button>
+                            <button id="sf-11-3" onclick="select(this);" type="button"><span></span>Toisinaan</button>
+                            <button id="sf-11-4" onclick="select(this);" type="button"><span></span>En ole varma</button>
+                            <button id="sf-11-5" onclick="select(this);" type="button"><span></span>Aika usein</button>
+                            <button id="sf-11-6" onclick="select(this);" type="button"><span></span>Lähes aina</button>
+                            <button id="sf-11-7" onclick="select(this);" type="button"><span></span>Aina!</button>
+                        </form>
+                        <p class="ignore-last">Y1.6. Tiedän mitä osaan ja, jos en vielä, niin opettelen.</p>
+                        <form id="sf-12">
+                            <button id="sf-12-1" onclick="select(this);" type="button"><span></span>Ei koskaan</button>
+                            <button id="sf-12-2" onclick="select(this);" type="button"><span></span>Todella harvoin</button>
+                            <button id="sf-12-3" onclick="select(this);" type="button"><span></span>Toisinaan</button>
+                            <button id="sf-12-4" onclick="select(this);" type="button"><span></span>En ole varma</button>
+                            <button id="sf-12-5" onclick="select(this);" type="button"><span></span>Aika usein</button>
+                            <button id="sf-12-6" onclick="select(this);" type="button"><span></span>Lähes aina</button>
+                            <button id="sf-12-7" onclick="select(this);" type="button"><span></span>Aina!</button>
+                        </form>
+                    </div>
+                    <div class="survey-section">
+                        <h3 class="survey-section-title">Ja vielä viimeinen kysymys/väite</h3>
+                        <p class="ignore-last">Nyt opiskellessani koen olevani oikealla alalla!</p>
+                        <form id="sf-13">
+                            <button id="sf-13-1" onclick="select(this);" type="button"><span></span>Ei koskaan</button>
+                            <button id="sf-13-2" onclick="select(this);" type="button"><span></span>Todella harvoin</button>
+                            <button id="sf-13-3" onclick="select(this);" type="button"><span></span>Toisinaan</button>
+                            <button id="sf-13-4" onclick="select(this);" type="button"><span></span>En ole varma</button>
+                            <button id="sf-13-5" onclick="select(this);" type="button"><span></span>Aika usein</button>
+                            <button id="sf-13-6" onclick="select(this);" type="button"><span></span>Lähes aina</button>
+                            <button id="sf-13-7" onclick="select(this);" type="button"><span></span>Aina!</button>
+                        </form>
+                    </div>
+                    <div id="survey-error" style="display: none;">
+                        <div id="survey-error-1" style="display: none;"></div>
+                        <div id="survey-error-2" style="display: none;"></div>
+                    </div>
+                    <button id="survey-submit" onclick="completesurvey();" type="button">Lähetä vastaukset &#10140;</button>
+                </div>
+            </section>
+        </div>
+        <footer>
+            <div id="footer-1">
+                <p>&copy; 2020 Otto Burman</p>
+            </div>
+            <div id="footer-2">
+                <p>Julkaisu on lisensoitu Creative Commons 4.0 NonCommercial CC BY-NC-käyttöluvalla.</p>
+            </div>
+        </footer>
+    </div>
+    <div id="return"><a href="../">&#10140;</a></div>
+    <script>
+        var loc = window.location.pathname; var path = loc.substring(0, loc.lastIndexOf("/")); var dirname = path.substring(1, path.lastIndexOf("/")); var subdirname = dirname.substring(dirname.lastIndexOf("/")+1); document.getElementById("group-2").innerHTML = subdirname;
+        var textinsert = document.getElementById("insert-text");
+        textinsert.addEventListener("keyup", function(event) {
+            if (event.keyCode === 13) {
+                event.preventDefault(); document.getElementById("insert-button").click();
+            }
+        });
+        function startsurvey() {
+            var surveyid = document.getElementById("insert-text").value;
+            if (surveyid.length==0) {
+                document.getElementById("insert-text").placeholder = "Tunnus puuttuu!";
+                if (document.getElementById("survey").style.display=="flex") {
+                    document.getElementById("survey-error").style.display = "flex"; document.getElementById("survey-error-2").style.display = "flex"; document.getElementById("survey-error-2").innerHTML = "<span>Tunnus puuttuu!</span>";
+                }
+            } else {
+                document.getElementById("insert-text").placeholder = "Kirjoita tunnus tähän";
+                document.getElementById("survey-error-2").style.display = "none"; document.getElementById("survey-error-2").innerHTML = "";
+                if (document.getElementById("survey").style.display=="none") {
+                    document.getElementById("survey").style.display = "flex"; setTimeout(function(){ document.getElementById("survey").style.transform = "scaleY(1)"; document.getElementById("survey").style.opacity = "1"; }, 7);
+                }
+            }
+        }
+        var totalselected = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        function select(ele) {
+            var selectedparent = ele.parentElement.id; var buttonlist = document.getElementById(selectedparent).children;
+            for (i = 0; i < buttonlist.length; i++) {
+                if (buttonlist[i].id!==ele.id) {
+                    document.getElementById(buttonlist[i].id).getElementsByTagName("span")[0].innerHTML = "";
+                } else if (buttonlist[i].id==ele.id) {
+                    totalselected.splice(selectedparent.substr(3)-1, 1, ele.id.substr(-1));
+                    document.getElementById(buttonlist[i].id).getElementsByTagName("span")[0].innerHTML = "&#10004;";
+                }
+            }
+            //console.log("Selected " + ele.id.substr(-1) + " for question " + selectedparent.substr(3));
+        }
+        function completesurvey() {
+            document.getElementById("survey-error").style.display = "none";
+            document.getElementById("survey-error-1").style.display = "none"; document.getElementById("survey-error-1").innerHTML = "";
+            document.getElementById("survey-error-2").style.display = "none"; document.getElementById("survey-error-2").innerHTML = "";
+            document.getElementById("insert-text").placeholder = "Kirjoita tunnus tähän";
+            var questionsanswered = 0;
+            for (i = 0; i < totalselected.length; i++) {
+                if (totalselected[i]!==0) {
+                    questionsanswered++;
+                } else if (totalselected[i]==0) {
+                    questionnum = i + 1;
+                    //console.log("Missing selection for question " + questionnum);
+                }
+            }
+            var qacheck = false; var uicheck = false;
+            if (questionsanswered==13) {
+                qacheck = true;
+                //console.log("Answers: " + totalselected);
+            } else if (questionsanswered!==13) {
+                document.getElementById("survey-error").style.display = "flex"; document.getElementById("survey-error-1").style.display = "flex"; document.getElementById("survey-error-1").innerHTML = "<span>Et ole vastannut kaikkiin kysymyksiin!</span>";
+            }
+            var surveyid = document.getElementById("insert-text").value;
+            if (surveyid.length==0) {
+                document.getElementById("insert-text").placeholder = "Tunnus puuttuu!"; document.getElementById("survey-error").style.display = "flex"; document.getElementById("survey-error-2").style.display = "flex"; document.getElementById("survey-error-2").innerHTML = "<span>Tunnus puuttuu!</span>";
+                //console.log("Username missing");
+            } else {
+                uicheck = true;
+                //console.log("Username is " + surveyid);
+            }
+            if (qacheck==true && uicheck==true) {
+                //console.log("User: " + surveyid + ", answers: " + totalselected);
+                window.location.href = "../survey-student-result";
+            }
+        }
+    </script>
+</body>
+</html>

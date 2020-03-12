@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppijan aivoriihi</title>
+    <link href="../media/omakuva1.png" rel="icon" type="image/png"/>
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed|Montserrat|Roboto+Mono|Dancing+Script&display=swap" rel="stylesheet">
+    <link href="../style/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div id="header-1">
+                <h1>Oppijan aivoriihi</h1>
+            </div>
+            <div id="header-2">
+                <span class="group" id="group-2">oppi2020</span>
+            </div>
+        </header>
+        <div id="content">
+            <section>
+                <p>Vastaa kysymyksiin työskentelyilmapiirin ylläpidosta ja/tai parantamisesta.</p>
+            </section>
+            <section>
+                <h2>Oppijan työskentelyilmapiirin kehittämistoimien ideointi</h2>
+                <p id="pre-insert">Aloita kysely kirjoittamalla yksilöivä tunnus tai salanimi:</p>
+                <div id="insert">
+                    <input id="insert-text" type="text" placeholder="Kirjoita tunnus tähän">
+                    <input id="insert-button" type="button" value="&#10140;" onclick="startsurvey();">
+                </div>
+                <div id="survey" style="display: none; opacity: 0; transform: scaleY(0);">
+                    <div class="survey-section">
+                        <h3 class="survey-section-title">Oppimisen ilo</h3>
+                        <p class="survey-section-quote">"Oppimisen iloa koetaan, kun saa tukea opintoihin ja oppimiseen, kun itse viihtyy ja muut viihtyvät, kun mielestään kehittyy, ja kun ongelmaratkaisutaidot paranevat."</p>
+                        <p class="survey-section-description">Luettele/luetelkaa keinoja, tapoja, tai esimerkkejä siitä, kuinka opinnoissa on toteutunut/toteutuu/voidaan toteuttaa seuraavat asiat:</p>
+                        <p>1. Miten oppijaa ohjataan/on ohjattu/voidaan ohjata tukemalla opintoja ja oppimista?</p>
+                        <textarea id="bs-1" rows="4" placeholder="Kirjoita tähän..."></textarea>
+                        <p>2. Miten oppijaa ohjataan/on ohjattu/voidaan ohjata huolehtimaan omasta, tai muiden viihtymisestä?</p>
+                        <textarea id="bs-2" rows="4" placeholder="Kirjoita tähän..."></textarea>
+                        <p class="ignore-last">3. Miten oppijaa ohjataan/on ohjattu/voidaan ohjata tunnistamaan oma kehittyminen ja taitojen paraneminen?</p>
+                        <textarea id="bs-3" rows="4" placeholder="Kirjoita tähän..."></textarea>
+                    </div>
+                    <div class="survey-section">
+                        <h3 class="survey-section-title">Psykologinen/henkinen omistajuus</h3>
+                        <p class="survey-section-quote">"Oppimisen psykologista omistajuutta koetaan, kun (oppimis)tehtävät ovat omakohtaisia ja itselleen sopivia, kun kuuluu ryhmään, kun suunnittelee omaa työtään, kun toteuttaa tehtäviä itseään varten, kun luottaa itseensä, ja tuntee pystyvänsä oppimaan mitä vain."</p>
+                        <p class="survey-section-description">Luettele/luetelkaa keinoja, tapoja, tai esimerkkejä siitä, kuinka opinnoissa on toteutunut/toteutuu/voidaan toteuttaa seuraavat asiat:</p>
+                        <p>4. Miten oppijaa opetetaan/on opetettu/voidaan opettaa tehtävillä ja esimerkeillä, jotka vastaavat oppijan omia lähtökohtia?</p>
+                        <textarea id="bs-4" rows="4" placeholder="Kirjoita tähän..."></textarea>
+                        <p>5. Miten oppijaa opetetaan/on opetettu/voidaan opettaa toimimaan ryhmässä, ja/tai oppimaan ryhmätyötaitoja?</p>
+                        <textarea id="bs-5" rows="4" placeholder="Kirjoita tähän..."></textarea>
+                        <p>6. Miten oppijaa opetetaan/on opetettu/voidaan opettaa suunnittelemaan töitä, ja/tai tehtävien tekemistä?</p>
+                        <textarea id="bs-6" rows="4" placeholder="Kirjoita tähän..."></textarea>
+                        <p>7. Miten oppijaa opetetaan/on opetettu/voidaan opettaa tunnistamaan tehtävien yhteys omaan elämään?</p>
+                        <textarea id="bs-7" rows="4" placeholder="Kirjoita tähän..."></textarea>
+                        <p>8. Miten oppijaa opetetaan/on opetettu/voidaan opettaa oppimaan omista onnistumisista tai epäonnistumisista luottamuksellisessa ilmapiirissä?</p>
+                        <textarea id="bs-8" rows="4" placeholder="Kirjoita tähän..."></textarea>
+                        <p class="ignore-last">9. Miten oppijaa opetetaan/on opetettu/voidaan opettaa oppimaan oppimista, ja opettelemaan vaikeitakin asioita?</p>
+                        <textarea id="bs-9" rows="4" placeholder="Kirjoita tähän..."></textarea>
+                    </div>
+                    <div class="survey-section">
+                        <h3 class="survey-section-title">Yrittäjämäinen oppiminen</h3>
+                        <p class="survey-section-quote">"Yrittäjämäistä oppimista koetaan, kun viihtyy uusien asioiden parissa, kun haluaa nähdä, kokea ja kehittää jotain uutta, kun panostaa haastaviin tehtäviin, kun tunnistaa osaamisensa, ja kun on halukas oppimaan uutta."</p>
+                        <p class="survey-section-description">Luettele/luetelkaa keinoja, tapoja, tai esimerkkejä siitä, kuinka opinnoissa on toteutunut/toteutuu/voidaan toteuttaa seuraavat asiat:</p>
+                        <p>10. Miten oppijalle mahdollistetaan/on mahdollistettu/voidaan mahdollistaa uusien ratkaisujen kokeilu?</p>
+                        <textarea id="bs-10" rows="4" placeholder="Kirjoita tähän..."></textarea>
+                        <p>11. Miten oppijalle mahdollistetaan/on mahdollistettu/voidaan mahdollistaa uusiin asioihin tutustuminen?</p>
+                        <textarea id="bs-11" rows="4" placeholder="Kirjoita tähän..."></textarea>
+                        <p>12. Miten oppijalle mahdollistetaan/on mahdollistettu/voidaan mahdollistaa sopivan haastavat tehtävät?</p>
+                        <textarea id="bs-12" rows="4" placeholder="Kirjoita tähän..."></textarea>
+                        <p class="ignore-last">13. Miten oppijalle mahdollistetaan/on mahdollistettu/voidaan mahdollistaa oman osaamisen tunnistaminen/tunnnustaminen ja uusien taitojen tavoitteellinen opettelu?</p>
+                        <textarea id="bs-13" rows="4" placeholder="Kirjoita tähän..."></textarea>
+                    </div>
+                    <div id="survey-error" style="display: none;">
+                        <div id="survey-error-1" style="display: none;"></div>
+                        <div id="survey-error-2" style="display: none;"></div>
+                    </div>
+                    <button id="survey-submit" onclick="completesurvey();" type="button">Lähetä vastaukset &#10140;</button>
+                </div>
+            </section>
+        </div>
+        <footer>
+            <div id="footer-1">
+                <p>&copy; 2020 Otto Burman</p>
+            </div>
+            <div id="footer-2">
+                <p>Julkaisu on lisensoitu Creative Commons 4.0 NonCommercial CC BY-NC-käyttöluvalla.</p>
+            </div>
+        </footer>
+    </div>
+    <div id="return"><a href="../">&#10140;</a></div>
+    <script>
+        var loc = window.location.pathname; var path = loc.substring(0, loc.lastIndexOf("/")); var dirname = path.substring(1, path.lastIndexOf("/")); var subdirname = dirname.substring(dirname.lastIndexOf("/")+1); document.getElementById("group-2").innerHTML = subdirname;
+        var textinsert = document.getElementById("insert-text");
+        textinsert.addEventListener("keyup", function(event) {
+            if (event.keyCode === 13) {
+                event.preventDefault(); document.getElementById("insert-button").click();
+            }
+        });
+        function startsurvey() {
+            var surveyid = document.getElementById("insert-text").value;
+            if (surveyid.length==0) {
+                document.getElementById("insert-text").placeholder = "Tunnus puuttuu!";
+                if (document.getElementById("survey").style.display=="flex") {
+                    document.getElementById("survey-error").style.display = "flex"; document.getElementById("survey-error-2").style.display = "flex"; document.getElementById("survey-error-2").innerHTML = "<span>Tunnus puuttuu!</span>";
+                }
+            } else {
+                document.getElementById("insert-text").placeholder = "Kirjoita tunnus tähän";
+                document.getElementById("survey-error-2").style.display = "none"; document.getElementById("survey-error-2").innerHTML = "";
+                if (document.getElementById("survey").style.display=="none") {
+                    document.getElementById("survey").style.display = "flex"; setTimeout(function(){ document.getElementById("survey").style.transform = "scaleY(1)"; document.getElementById("survey").style.opacity = "1"; }, 7);
+                }
+            }
+        }
+        function completesurvey() {
+            document.getElementById("survey-error").style.display = "none";
+            document.getElementById("survey-error-1").style.display = "none"; document.getElementById("survey-error-1").innerHTML = "";
+            document.getElementById("survey-error-2").style.display = "none"; document.getElementById("survey-error-2").innerHTML = "";
+            document.getElementById("insert-text").placeholder = "Kirjoita tunnus tähän";
+            var questionsanswered = 0; var totalselected = document.getElementsByTagName("textarea");
+            for (i = 0; i < totalselected.length; i++) {
+                questionnum = i + 1;
+                if (totalselected[i].value!=="") {
+                    questionsanswered++;
+                    //console.log("Answered \"" + totalselected[i].value + "\" to question " + questionnum);
+                } else if (totalselected[i].value=="") {
+                    //console.log("Missing answer for question " + questionnum);
+                }
+            }
+            var qacheck = false; var uicheck = false;
+            if (questionsanswered==13) {
+                qacheck = true;
+            } else if (questionsanswered!==13) {
+                document.getElementById("survey-error").style.display = "flex"; document.getElementById("survey-error-1").style.display = "flex"; document.getElementById("survey-error-1").innerHTML = "<span>Et ole vastannut kaikkiin kysymyksiin!</span>";
+            }
+            var surveyid = document.getElementById("insert-text").value;
+            if (surveyid.length==0) {
+                document.getElementById("insert-text").placeholder = "Tunnus puuttuu!"; document.getElementById("survey-error").style.display = "flex"; document.getElementById("survey-error-2").style.display = "flex"; document.getElementById("survey-error-2").innerHTML = "<span>Tunnus puuttuu!</span>";
+                //console.log("Username missing");
+            } else {
+                uicheck = true;
+                //console.log("Username is " + surveyid);
+            }
+            if (qacheck==true && uicheck==true) {
+                window.location.href = "../brainstorm-student-result";
+            }
+        }
+    </script>
+</body>
+</html>

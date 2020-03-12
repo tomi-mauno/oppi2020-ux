@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Työ-/oppimisilmapiirin kartoitus</title>
+    <link href="media/omakuva1.png" rel="icon" type="image/png"/>
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed|Montserrat|Roboto+Mono|Dancing+Script&display=swap" rel="stylesheet">
+    <link href="style/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div id="header-1">
+                <h1>Työ-/oppimisilmapiirin kartoitus</h1>
+            </div>
+            <div id="header-2">
+                <span class="group" id="group-1">oppi2020</span>
+            </div>
+        </header>
+        <div id="content">
+            <section>
+                <p>Hyvän työskentelyilmapiirin ylläpitoon, ja edistämiseen, sekä alanvaihtajien tunnistamiseen keskittyvä projekti.</p>
+            </section>
+            <section>
+                <h2>Työskentelyilmapiirin kartoitus</h2>
+                <p>Oppijan tai opettajan kokeman työskentelyilmapiirin kartoitus.</p>
+                <p>Keskennäisinä aiheina esiintyvät oppimisen ilo, omistajuus ja yrittäjämäisyys.</p>
+                <div class="button-container">
+                    <a class="button" href="./survey-student">Oppijan kokemusten keruu &#10140;</a>
+                    <a class="button" href="#">Opettajan kokemusten keruu &#10140;</a>
+                </div>
+            </section>
+            <section>
+                <h2>Työskentelyilmapiirin kehittämistoimien ideointi</h2>
+                <p>Mietintöjen keräys työskentelyilmapiiristä, sen ylläpidosta, ja sen parantamisesta.</p>
+                <div class="button-container">
+                    <a class="button" href="./brainstorm-student">Oppijan aivoriihi &#10140;</a>
+                    <a class="button" href="#">Opettajan aivoriihi &#10140;</a>
+                </div>
+            </section>
+            <section>
+                <h2>Lähestymistavan taustoja</h2>
+                <p>Lue dokumentaatio siitä, miten tähän on päädytty, ja kuinka tämä projekti tulee etenemään: <a href="#">&#8811;oppi2020.pdf</a></p>
+                <p>Jos sinulla on kysyttävää, ota yhteyttä osoitteeseen: otto(at)ottoburman.fi</p>
+            </section>
+        </div>
+        <footer>
+            <div id="footer-1">
+                <p>&copy; 2020 Otto Burman</p>
+            </div>
+            <div id="footer-2">
+                <p>Julkaisu on lisensoitu Creative Commons 4.0 NonCommercial CC BY-NC-käyttöluvalla.</p>
+            </div>
+        </footer>
+    </div>
+    <script>
+        var loc = window.location.pathname; var path = loc.substring(0, loc.lastIndexOf("/")); var dirname = path.substring(path.lastIndexOf("/")+1); document.getElementById("group-1").innerHTML = dirname;
+    </script>
+</body>
+</html>

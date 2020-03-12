@@ -1,0 +1,59 @@
+// Results CSS
+
+// Define result colors
+$result1: black;
+$result2: red;
+$result3: green;
+$result4: blue;
+
+h3 {
+    @include font1;
+    color: $color1;
+    font-size: $calc5;
+    margin-top: $calc4;
+    margin-bottom: $calc4;
+    padding-bottom: $calc4;
+    border-bottom: 1.5px solid rgba($color4, 0.1);
+}
+
+.result {
+    display: flex;
+    align-items: center;
+    padding-bottom: $calc4;
+    h4 {
+        @include font1;
+        font-size: $calc5;
+        margin-left: $calc4;
+        flex-grow: 1;
+    }
+    span {
+        @include font3;
+        font-size: $calc1;
+        text-align: right;
+        min-width: calc(1rem + 10vw);
+        margin-left: $calc4;
+        padding-left: $calc4;
+        border-left: 1.5px solid rgba($color4, 0.1);
+    }
+    #result-1 {
+        color: $result1;
+    }
+    #result-2 {
+        color: $result2;
+    }
+    #result-3 {
+        color: $result3;
+    }
+    #result-4 {
+        color: $result4;
+    }
+}
+
+.result:first-of-type {
+    margin-top: $calc4;
+    border-bottom: 1.5px solid rgba($color4, 0.1);
+}
+
+.result:last-of-type {
+    border-bottom: 1.5px solid rgba($color4, 0.1);
+}

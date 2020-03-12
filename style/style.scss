@@ -1,0 +1,198 @@
+// Get reset
+@import './reset.scss';
+
+// Define colors
+$color1: #800015;
+$color2: #FFF3DF;
+$color3: #FFFFFF;
+$color4: #000000;
+$color5: #C10C2A;
+
+// Define fonts
+@mixin font1() {
+    font-family: 'Montserrat', sans-serif;
+}
+@mixin font2() {
+    font-family: 'Encode Sans Condensed', sans-serif;
+}
+@mixin font3() {
+    font-family: 'Dancing Script', cursive;
+}
+@mixin font4() {
+    font-family: 'Roboto Mono', monospace;
+}
+
+// Measurements for responsive elements
+$calc1: calc(1rem + 1vw);
+$calc2: calc(1rem + 0.5vw);
+$calc3: calc(1rem + 1.25vw);
+$calc4: calc(0.75rem + 0.25vw);
+$calc5: calc(0.75rem + 0.5vw);
+$calc6: calc(0.5rem + 0.25vw);
+
+// Define various mixins
+@mixin buttonborder() {
+    border: 1.5px solid $color1;
+    border-radius: 0.5rem;
+}
+@mixin buttonreset() {
+    outline: none;
+    background: none;
+}
+@mixin buttontransition() {
+    transition: background 0.25s, color 0.25s;
+}
+
+// Base CSS
+#wrapper {
+    max-width: 1080px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    min-height: 100vh;
+}
+
+p {
+    @include font1;
+    font-size: $calc4;
+}
+
+h2 {
+    @include font1;
+    font-size: $calc5;
+    color: $color1;
+}
+
+a {
+    color: $color1;
+}
+
+a:hover {
+    color: $color5;
+}
+
+::placeholder {
+    opacity: 0.6;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    padding: $calc1;
+    background: $color1;
+    h1 {
+        @include font2;
+        color: $color2;
+        font-size: $calc2;
+    }
+    #header-1 {
+        white-space: nowrap;
+    }
+    #header-2 {
+        margin-top: $calc4;
+        .group {
+            @include font2;
+            color: $color2;
+        }
+    }
+}
+
+#content {
+    background: $color2;
+    padding: $calc3;
+    flex-grow: 1;
+    section {
+        margin-top: $calc3;
+        margin-bottom: $calc3;
+        h2 {
+            margin-bottom: $calc5;
+        }
+        p {
+            margin-left: $calc4;
+            margin-bottom: $calc4;
+        }
+        p:last-of-type {
+            margin-bottom: 0;
+        }
+        .ignore-last:last-of-type {
+            margin-bottom: $calc4;
+        }
+    }
+    section:first-of-type {
+        margin-top: 0;
+        p {
+            margin-left: 0;
+        }
+    }
+    section:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: $calc4;
+    .button {
+        @include font1;
+        @include buttonborder;
+        @include buttontransition;
+        color: $color1;
+        background: $color2;
+        display: block;
+        padding: 0.75rem;
+        margin-top: $calc4;
+        margin-right: $calc4;
+        font-size: $calc4;
+        font-weight: 700;
+        text-decoration: none;
+    }
+    .button:hover {
+        color: $color2;
+        background: $color1;
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: $calc1;
+    background: $color1;
+    p {
+        color: $color2;
+    }
+    #footer-1 {
+        white-space: nowrap;
+    }
+    #footer-2 {
+        margin-top: $calc4;
+    }
+}
+
+#return {
+    display: flex;
+    position: fixed;
+    background: $color2;
+    margin: $calc5;
+    transform: scale(-1, 1);
+    border: 1.5px solid $color1;
+    border-radius: 50%;
+    opacity: 0.5;
+    bottom: 0;
+    left: 0;
+    user-select: none;
+    transition: opacity 0.25s;
+    a {
+        color: $color1;
+        font-size: $calc1;
+        padding: $calc5;
+        text-decoration: none;
+    }
+}
+#return:hover {
+    opacity: 1;
+}
+
+// Get page-specific CSS
+@import './surveys.scss';
+@import './results.scss';
